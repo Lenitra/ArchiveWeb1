@@ -1,0 +1,290 @@
+/* #region GLOBAL */
+    html {
+      background-color: black;
+
+    }
+
+    @font-face {
+    font-family: "Titres";
+    src: url("../fonts/Aileron.otf")
+    }
+    @font-face {
+    font-family: "Textes";
+    src: url("../fonts/neuro.ttf")
+    }
+    .hide {
+      display: none;
+    }
+    body{
+      margin: 0;
+      height: 100vh;
+      width: 100vw;}
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+/* #endregion */
+
+
+
+/* #region GRILLE principale */
+
+div.page {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 80vw 20vw;
+  grid-template-rows: 100vh;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-auto-flow: column;
+
+} 
+/* #endregion */
+
+/* PARTIE 1 */
+/* #region Interface principale de gestion (pi) GRID */
+
+
+
+
+/* #region PARTIE 1 Map */
+
+.map .mapti{
+  text-align: center;
+}
+
+.map {
+  list-style: none;
+}
+
+.map h3, .map h1 , .pn p.mapii {
+  color: white;
+  font-family: Textes;
+}
+
+.map h2, .map h4{
+  color: white;
+  font-family: Textes;
+  margin-left: 5vw;
+}
+
+
+.imputmap {
+  width: 15vw;
+  text-align: center;
+}
+button#go {
+  width: 18vw;
+  margin-top: 2vh;
+  height: 6vh;
+  font-family: Titres;
+  font-size: 175%;
+}
+/* #endregion */
+
+
+
+
+
+body{
+  --planet-size: 3vw;
+  --sun-size: 5vw;
+}
+
+
+.map .conqueror {
+  display: none;
+}
+
+.map form :hover .conqueror{
+  display: block;
+}
+
+.map img .systemesol{
+  opacity: 0.8;
+}
+
+
+
+
+.mappla img {
+  width: var(--planet-size);
+}
+
+.sun {
+  position: absolute;
+  
+  text-align: center;
+  top: calc(50vh - 2.5vw);
+  left: calc(40vw - 2.5vw);
+  height: var(--sun-size);
+  width: var(--sun-size);
+  animation: child_rotate 90s linear infinite;
+}
+
+
+h6 {
+  color: white;
+  text-align: center;
+  margin: -0.5vw;
+}
+
+#mappla1 h6 {
+  animation: child_rotate var(--revo) linear infinite;
+}
+#mappla1 {
+  position: absolute;
+  width: 3vw;
+  height: 3vw;
+  top: calc(var(--cirad) *1.4);
+}
+
+#mappla1 #img {
+  width: 3vw;
+  animation: child_rotate var(--jour) linear infinite;
+}
+
+#circle1 {	
+  --cirad: 5vw;
+  --revo: .2s;
+  --jour: .1s;
+  position: absolute;
+  left: calc(40vw - var(--cirad));
+  top: calc(50vh - var(--cirad));
+  height: calc(var(--cirad) * 2);
+  width: calc(var(--cirad) * 2);
+	border: 1px solid rgba(255, 255, 255, 0.575);
+	border-radius: 50%;
+	animation: parent_rotate var(--revo) linear infinite;
+  z-index: 11;
+}
+
+
+#circle2 {	
+  --cirad: 8vw;
+  --revo: 40s;
+  --jour: 8s;
+  position: absolute;
+  left: calc(40vw - var(--cirad));
+  top: calc(50vh - var(--cirad));
+  height: calc(var(--cirad) * 2);
+  width: calc(var(--cirad) * 2);
+	border: 1px solid rgba(255, 255, 255, 0.575);
+	border-radius: 50%;
+	animation: parent_rotate var(--revo) linear infinite;
+  z-index: 10;
+}
+
+#circle3 {	
+  --cirad: 11vw;
+  --revo: 25s;
+  --jour: 15s;
+  position: absolute;
+  left: calc(40vw - var(--cirad));
+  top: calc(50vh - var(--cirad));
+  height: calc(var(--cirad) * 2);
+  width: calc(var(--cirad) * 2);
+	border: 1px solid rgba(255, 255, 255, 0.575);
+	border-radius: 50%;
+	animation: parent_rotate var(--revo) linear infinite;
+  z-index: 9;
+}
+
+#circle4 {	
+  --cirad: 14vw;
+  --revo: 40s;
+  --jour: 10s;
+  position: absolute;
+  left: calc(40vw - var(--cirad));
+  top: calc(50vh - var(--cirad));
+  height: calc(var(--cirad) * 2);
+  width: calc(var(--cirad) * 2);
+	border: 1px solid rgba(255, 255, 255, 0.575);
+	border-radius: 50%;
+	animation: parent_rotate var(--revo) linear infinite;
+  z-index: 8;
+}
+
+#circle5 {	
+  --cirad: 17vw;
+  --revo: 60s;
+  --jour: 30s;
+  position: absolute;
+  left: calc(40vw - var(--cirad));
+  top: calc(50vh - var(--cirad));
+  height: calc(var(--cirad) * 2);
+  width: calc(var(--cirad) * 2);
+	border: 1px solid rgba(255, 255, 255, 0.575);
+	border-radius: 50%;
+	animation: parent_rotate var(--revo) linear infinite;
+  z-index: 7;
+}
+
+#circle6 {	
+  --cirad: 20vw;
+  --revo: 25s;
+  --jour: 15s;
+  position: absolute;
+  left: calc(40vw - var(--cirad));
+  top: calc(50vh - var(--cirad));
+  height: calc(var(--cirad) * 2);
+  width: calc(var(--cirad) * 2);
+	border: 1px solid rgba(255, 255, 255, 0.575);
+	border-radius: 50%;
+	animation: parent_rotate var(--revo) linear infinite;
+  z-index: 6;
+}
+
+#circle7 {	
+  --cirad: 23vw;
+  --revo: 25s;
+  --jour: 15s;
+  position: absolute;
+  left: calc(40vw - var(--cirad));
+  top: calc(50vh - var(--cirad));
+  height: calc(var(--cirad) * 2);
+  width: calc(var(--cirad) * 2);
+	border: 1px solid rgba(255, 255, 255, 0.575);
+	border-radius: 50%;
+	animation: parent_rotate var(--revo) linear infinite;
+  z-index: 5;
+}
+
+
+#circle8 {	
+  --cirad: 26vw;
+  --revo: 25s;
+  --jour: 15s;
+  position: absolute;
+  left: calc(40vw - var(--cirad));
+  top: calc(50vh - var(--cirad));
+  height: calc(var(--cirad) * 2);
+  width: calc(var(--cirad) * 2);
+	border: 1px solid rgba(255, 255, 255, 0.575);
+	border-radius: 50%;
+	animation: parent_rotate var(--revo) linear infinite;
+  z-index: 4;
+}
+
+
+
+
+
+@keyframes parent_rotate {
+  0% {
+    transform: rotate(359deg)
+  }
+  100% {
+    transform: rotate(0deg)
+  }
+}
+
+
+@keyframes child_rotate {
+  0% {
+    transform: rotate(-359deg)
+  }
+  100% {
+    transform: rotate(0deg)
+  }
+}

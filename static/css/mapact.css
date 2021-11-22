@@ -1,0 +1,50 @@
+.grid3c {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 20vh; 
+    gap: 0px 0px;  
+    text-align: center;
+}
+
+#vaisseaux {
+    margin-top: 3vh;
+    margin-bottom: 6vh;
+}
+
+.grid3c>div>img{
+    max-width: 23vw;
+    max-height: 9vh;
+}
+
+.mapact p, .mapact h4, .mapact h3, .mapact h2 {
+    font-family: Textes;
+    color: white;
+    text-align: center;
+}
+
+.select {
+    text-align: center;
+}
+
+ul.action{
+    margin-top: 5vh;
+}
+
+
+#marg {
+    height: 1vh;
+    margin-top: 20vh;
+}
+
+ul.action button {
+    width: 18vw;
+    margin-top: 2vh;
+    height: 5vh;
+    font-family: Titres;
+    font-size: 175%;
+}
+
+.selectedstats * {
+    font-family: Textes;
+    color: white;
+}

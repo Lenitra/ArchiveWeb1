@@ -1,0 +1,270 @@
+
+
+  html {
+    background-color: black;
+    overflow: hidden;
+
+  }
+
+  @font-face {
+  font-family: "Titres";
+  src: url("../fonts/Aileron.otf")
+  }
+  @font-face {
+  font-family: "Textes";
+  src: url("../fonts/neuro.ttf")
+  }
+  .hide {
+    display: none;
+  }
+  body{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background: url("../imgs/bannerback.jpg");
+    display: flex;
+  }
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+
+/* Grille entre le pn et pi */
+div.page {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 80vw 20vw;
+  grid-template-rows: 100vh;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-auto-flow: column;
+}
+
+.pn {
+  background-color: #162032;
+}
+
+.plist{
+  overflow-y: scroll;
+  height: 90vh;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #117081; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0c4b57; 
+}
+
+
+.pn ul {
+  text-align: center;
+}
+
+.pn .princi {
+  display: block;
+  overflow: hidden;
+  margin-top: 0;
+  margin-bottom: 1vh;
+}
+.pn .princi li{
+  display: block;
+  float: left;
+  width: 10vw;
+}
+ .pn .princi li button{
+    border: none;
+    width: 100%;
+    color: white;
+    background-color: #162032;
+    padding-bottom: 0.75vh;
+    padding-top: 0.25vh;
+  }
+ .pn .princi li button:hover{
+    border: none;
+    color: white;
+    background-color: #003758;;
+  }
+
+.pn .plist li button {
+  margin-top: 1vh;
+  width: 18vw;
+  /* height:min-content; */
+}
+
+.pn button {
+  font-family: Textes;
+}
+
+/* #region Bouttons */
+button {
+  cursor: pointer;
+}
+
+.kave-btn {
+  position: relative;
+  border: solid 1px rgba(0, 214, 252, 0.3);
+  background: none;
+  color: rgba(0, 214, 252, 0.5);
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 1.8px;
+  width: 200px;
+  height: 70px;
+  padding: 0;
+  transition: all 0.25s ease;
+  outline: none;
+}
+.kave-btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 60px;
+  height: 1px;
+  transform: translateY(-1px);
+  background: #00d6fc;
+  transition: all 0.25s ease;
+}
+.kave-btn:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  width: 60px;
+  height: 1px;
+  transform: translateY(1px);
+  background: #00d6fc;
+  transition: all 0.25s ease;
+}
+.kave-btn:hover {
+  box-shadow: 1px 1px 8px rgba(0, 214, 252, 0.3);
+  color: #00d6fc;
+  text-shadow: 0 0 8px rgba(0, 214, 252, 0.4);
+}
+.kave-btn:hover.kave-btn:before {
+  left: 0;
+  width: 20px;
+}
+.kave-btn:hover.kave-btn:after {
+  right: 0;
+  width: 20px;
+}
+.kave-btn:hover .kave-line:before {
+  bottom: 0;
+}
+.kave-btn:hover .kave-line:after {
+  top: 0;
+}
+.kave-line:before {
+  content: "";
+  position: absolute;
+  bottom: 30%;
+  right: 0;
+  width: 1px;
+  height: 20px;
+  transform: translateX(1px);
+  background: #00d6fc;
+  transition: all 0.25s ease;
+}
+.kave-line:after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 1px;
+  height: 20px;
+  transform: translateX(-1px);
+  background: #00d6fc;
+  transition: all 0.25s ease;
+  }
+
+
+
+  .kave-btnd {
+    position: relative;
+    border: solid 1px rgba(0, 214, 252, 0.3);
+    background: none;
+    color: rgba(0, 214, 252, 0.5);
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 1.8px;
+    width: 200px;
+    height: 70px;
+    padding: 0;
+    transition: all 0.25s ease;
+    outline: none;
+  }
+  .kave-btnd:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 60px;
+    height: 1px;
+    transform: translateY(-1px);
+    background: #00d6fc;
+    transition: all 0.25s ease;
+  }
+  .kave-btnd:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    width: 60px;
+    height: 1px;
+    transform: translateY(1px);
+    background: #00d6fc;
+    transition: all 0.25s ease;
+  }
+
+  .kave-lined:before {
+    content: "";
+    position: absolute;
+    bottom: 30%;
+    right: 0;
+    width: 1px;
+    height: 20px;
+    transform: translateX(1px);
+    background: #00d6fc;
+    transition: all 0.25s ease;
+  }
+  .kave-lined:after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 1px;
+    height: 20px;
+    transform: translateX(-1px);
+    background: #00d6fc;
+    transition: all 0.25s ease;
+  }
+
+        
+/* #endregion */
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,285 @@
+html{
+  background: center/80% no-repeat url("../imgs/logo_anime_bg.gif"), linear-gradient(to top, #1b2735, #19202b, #151a22, #111319, #090a0f);
+  overflow:hidden;
+  height: 100%;
+  color: white;
+}
+
+@font-face {
+  font-family: "Titres";
+  src: url("../fonts/Aileron.otf")
+}
+
+@font-face {
+  font-family: "Textes";
+  src: url("../fonts/neuro.ttf")
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #117081; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0c4b57; 
+}
+
+#hide {
+  display: none;
+}
+
+h1{
+  font-family: "Titres";
+  color: white;
+  font-size: 6vw;
+  margin-top: 0% ;
+  text-align: center;
+  background-color: rgba(98, 101, 103, 0.4);
+  border-radius: 16% 3% ;
+  margin: 1vh auto;
+  width: 60vw;  
+}
+
+.separate{
+  display: grid;
+  grid-template-columns: 35% 30% 35%;
+}
+
+/* Cadre co et insc */
+.cadre{
+	background-color: rgba(98, 101, 103, 0.6);
+	border-radius: 10px;
+	margin: 5% 20px;
+	border: 4px solid black;
+  border-top: 0;
+  overflow: hidden;
+  max-height: 80vh;
+}
+
+.cadre h2{
+	font-size: 3.5vw;
+	border-radius: 10px 10px 0px 0px;
+  background-color: #0000009c;
+  text-align: center;
+  color: white;
+  margin: 0;
+  font-family: "Textes";
+}
+
+.container{
+  padding: 3%;
+}
+
+.log_cont {
+  display: flex;
+  width: 100%;
+  margin: 10px 0 30px 0; 
+}
+
+.log_cont_rg{
+  margin: 10px 0 20px 0;
+}
+
+.mdp{
+  margin: 5px 0 10px 0;
+}
+
+.icon {
+  padding: 10px;
+  background: black;
+  color: white;
+  min-width: 20px;
+  text-align: center;
+}
+
+input[type=text], input[type=password], input[type=email] {
+  width: 100%;
+  padding: 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: auto;
+}
+
+.button {
+  background-color: #000000;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 14px 20px;
+  margin: 3% auto;
+  cursor: pointer;
+  min-width: 50%;
+  display: block;
+}
+
+.forgmdp{
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  padding: 1vw;
+  font-size: 2vh;
+  cursor: pointer;
+}
+
+.forgmdp:active{
+  color: rgb(255, 0, 0);
+}
+
+/* Affichage oublie mdp */
+.cadre_forg {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9); 
+  padding-top: 60px;
+}
+
+.forg {
+  margin: auto; 
+  width: 50%; 
+}
+
+#mdp_title{
+  text-align: center;
+
+}
+#mdp_txt{
+  font-size: 20px;
+  padding: 1%;
+}
+
+.close {
+  float: right;
+  padding: 1% 1vw;
+  color: red;
+  font-size: 5vh;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  cursor: pointer;
+  background-color: rgb(44, 44, 44);
+}
+
+/* Captcha */
+.captcha{
+  border: 1px dashed #ccc;
+  width: 90%;
+  display: block;
+  margin: auto;
+  background-color:rgba(98, 101, 103, 0.8) ;
+  padding: 2%;
+}
+
+#captcha{
+  width: 90%;
+  display: block;
+  margin: 2% auto;
+}
+
+#im_captcha{
+  display: block;
+  margin: 1% auto 3% auto;
+  max-width: 90%;
+}
+
+#captcha_txt{
+  margin-left: 5%;
+}
+
+/* Message d'erreur*/
+#error_cont {
+  visibility: show;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: rgba(255, 0, 0, 0.4);
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px 0;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 5%;
+}
+
+#error_cont.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@media (max-height:700px){
+  .cadre_rg{
+    max-height: 70vh;
+    overflow: auto;
+  }
+}
+
+@media (max-width:900px){
+  html{
+    background: top/200% no-repeat url("../imgs/logo_anime_bg.gif"), linear-gradient(to top, #1b2735, #19202b, #151a22, #111319, #090a0f);
+    overflow: auto;
+  }
+  .separate{
+    display: grid;
+    grid-template-columns: 50% 0 50%;
+  }
+  #error_cont {
+    background-color: rgba(255, 0, 0, 0.9);
+  }
+  .forg {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-device-width : 1024px) and (min-device-width : 479px){
+  html{
+    background: top/150% no-repeat url("../imgs/logo_anime_bg.gif"), linear-gradient(to top, #1b2735, #19202b, #151a22, #111319, #090a0f);
+    overflow: auto; 
+  }
+  .separate{
+    display: grid;
+    grid-template-columns: 50% 0 50%;
+  } 
+  .forg {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-device-width : 480px) {
+  html{
+    height: auto;
+  }
+  h1{
+    font-size: 10vw;
+    width: 90vw;
+  }
+  .separate{
+    display: block;
+  }
+  .cadre h2{
+    font-size: 8vw;
+  }  
+  .forg {
+    width: 90%;
+  }
+}

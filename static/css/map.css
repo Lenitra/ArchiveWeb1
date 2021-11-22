@@ -1,0 +1,343 @@
+/* #region GLOBAL */
+    html {
+      background-color: black;
+
+    }
+
+    @font-face {
+    font-family: "Titres";
+    src: url("../fonts/Aileron.otf")
+    }
+    @font-face {
+    font-family: "Textes";
+    src: url("../fonts/neuro.ttf")
+    }
+    .hide {
+      display: none;
+    }
+    body{
+      margin: 0;
+      height: 100vh;
+      width: 100vw;}
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+/* #endregion */
+
+
+
+/* #region GRILLE principale */
+
+div.page {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 80vw 20vw;
+  grid-template-rows: 100vh;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-auto-flow: column;
+
+} 
+/* #endregion */
+
+/* PARTIE 1 */
+/* #region Interface principale de gestion (pi) GRID */
+  .pi {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+    grid-template-columns: 20vw 60vw;
+
+  }
+
+  /* #region colonne 1 */
+  .logo {
+    width: 10vw;
+    margin-left: 3.5vw;
+  }
+
+  .navpla li button {
+    width: 12.5vw;
+    font-family: Titres;
+    font-size: 1.25vw;
+    /* border: none; */
+  }
+  .navpla li {
+    margin-left: 2vw;
+    margin-bottom: 1vw;
+  }
+  .navpla li button:hover {
+    color: #01568b;
+    background-color: #011C2D;
+    border: none;
+  }
+ .navpla {
+    width: auto;
+    overflow: hidden;
+    padding-bottom: 5vh;
+    padding-top: 0.5vh;
+  }
+
+  .pr .ress li {
+    color: whitesmoke;
+    font-family: Textes;
+    border-radius: 2px;
+    margin-bottom: 3vh;
+  }
+  .pr .ress {
+    font-size: 2.2vh;
+    margin-left: 2vw;
+  }
+  .pr .ress img {
+    height: 3vh;
+    width: auto;
+  }
+  /* #endregion */
+  /* #endregion */
+
+  /* #region Colonne 2 */
+  
+  /* #region BUILDS */
+
+   #carbone{
+    background-image: url("../imgs/mining.png");
+    background-size: 20%;
+    background-repeat: no-repeat;
+  }
+
+  #puces{
+    background-image: url("../imgs/factory.png");
+    background-size: 17%;
+    background-repeat: no-repeat;
+  }
+
+  #hydro{
+    background-image: url("../imgs/powerplant.png");
+    background-size: 20%;
+    background-repeat: no-repeat;
+  }
+
+  #sp{
+    background-image: url("../imgs/control-tower.png");
+    background-size: 20%;
+    background-repeat: no-repeat;
+  }
+
+  #rad{
+    background-image: url("../imgs/satellite.png");
+    background-size: 20%;
+    background-repeat: no-repeat;
+  }
+
+  .builds {
+    color: whitesmoke;
+    width: 65vw;
+    margin-right: 15vw;
+    display: grid;
+    grid-template-columns: repeat(2, 28vw);
+    grid-template-rows: repeat(3, 30vh);
+    grid-column-gap: 3vh;
+    grid-row-gap: 1vw;
+  } 
+
+  .builds section {
+    padding-right: 20%;
+    padding-left: 20%;
+  }
+  
+  .builds p, .builds li, .builds button, .builds h4  {
+    font-family: Textes;
+  }
+
+  .builds p, .builds li, .builds button {
+    font-size: 1.5vh;
+  }
+
+  .builds ul {
+    padding-left: 1vw;
+  }
+
+  abbr {
+    text-decoration: none;
+  }
+
+  .builds img {
+    float: right;
+    width: 50%;
+    margin-top: 1%;
+  }
+
+  .builds li img {
+    height: 2vh;
+    width: auto;
+    float: none;
+    margin-top: 0;
+  }
+  .builds li {
+    margin-top: 1vh;
+  } 
+
+  /* #endregion */  
+  
+  /* #region SPACEPORT */
+  main.sp, main.hang{
+    color: whitesmoke;
+    width: 65vw;
+    margin-right: 15vw;
+    display: grid;
+    grid-template-columns: repeat(2, 28vw);
+    grid-template-rows: repeat(3, 30vh);
+    grid-column-gap: 3vh;
+    grid-row-gap: 1vw;
+  } 
+  .sp section, .hang section {
+    padding-left: 21%;
+  }
+  .sp section li, .hang section li {
+    padding-bottom: 0.2vh;
+  }
+  .sp img, .hang img {
+    height: 2vh;
+    width: auto;
+    float: none;
+    margin-top: 0;
+  }
+  
+  .sp>section *, .hang>section *, h6.clsmsg,p.clsmsg{
+    font-family: Textes;
+  }
+
+  h2.clsmsg{
+    font-family: Titres;
+  }
+
+  /* #endregion */
+  /* #endregion */
+
+/* Partie 2 */
+/* #region Interface de navigation (pn) */
+
+.pn{
+  background-color: #011C2D;
+}
+.pn ul {
+  text-align: center;
+}
+
+.pn .princi {
+  display: block;
+  overflow: hidden;
+  margin-top: 0;
+  margin-bottom: 1vh;
+}
+.pn .princi li{
+  display: block;
+  float: left;
+  width: 10vw;
+}
+ .pn .princi li button{
+    border: none;
+    width: 100%;
+    color: white;
+    background-color: #011C2D;;
+  }
+ .pn .princi li button:hover{
+    border: none;
+    color: white;
+    background-color: #003758;;
+  }
+
+.pn .plist li button {
+  margin-top: 1vh;
+  width: 18vw;
+}
+
+.pn button {
+  font-family: Textes;
+}
+/* #endregion */
+
+
+
+
+
+/* #region PARTIE 1 Map */
+
+.map .mapti{
+  text-align: center;
+}
+
+.map {
+  list-style: none;
+}
+
+.map form {
+  margin: 1vh;
+}
+
+.map form {
+  margin: 1vh;
+}
+
+.map h3, .map h1 , .pn p.mapii {
+  color: white;
+  font-family: Textes;
+}
+
+.map h2, .map h4{
+  color: white;
+  font-family: Textes;
+  margin-left: 5vw;
+}
+
+.map .conqueror {
+  display: none;
+}
+
+.map form :hover .conqueror{
+  display: block;
+}
+.map img.flag {
+  /* float: right; */
+  height: 3vw;
+  width: auto;
+  margin-left: -3vw;
+}
+
+.map img .systemesol{
+  opacity: 0.8;
+}
+
+.map img {
+  width: 6vw;
+}
+
+
+.mappla {
+  float: left;
+}
+
+.map .firstgridd {
+  display: grid;
+  grid-auto-flow: column;
+}
+.map .secondgrid {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.imputmap {
+  width: 15vw;
+  text-align: center;
+}
+button#go {
+    width: 18vw;
+    margin-top: 2vh;
+    height: 6vh;
+    font-family: Titres;
+    font-size: 175%;
+}
+/* #endregion */
+
